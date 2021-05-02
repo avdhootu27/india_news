@@ -15,12 +15,6 @@ class Article extends StatefulWidget {
 class _ArticleState extends State<Article> {
 
   final Completer<WebViewController> _completer = Completer<WebViewController>();
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   // Enable hybrid composition.
-  //   if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
-  // }
 
 
   @override
