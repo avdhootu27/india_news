@@ -9,7 +9,7 @@ class News {
   List<ArticleModel> news = [];
 
   Future<void> getNews() async {
-    var url = Uri.parse("http://newsapi.org/v2/top-headlines?country=in&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey=9bd00bf8610745e9ae52cddd55eaa5d5");
+    var url = Uri.parse("http://newsapi.org/v2/top-headlines?country=in&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey={...}");
     Response response = await http.get(url);
     print(response.statusCode);
     if (response.statusCode == 200) {
@@ -47,7 +47,7 @@ class CategoryNews {
   List<ArticleModel> news = [];
 
   Future<void> getNews(String category) async {
-    var url = Uri.parse("http://newsapi.org/v2/top-headlines?country=in&category=$category&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey=9bd00bf8610745e9ae52cddd55eaa5d5");
+    var url = Uri.parse("http://newsapi.org/v2/top-headlines?country=in&category=$category&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey={...}");
     Response response = await http.get(url);
     print(response.statusCode);
     if (response.statusCode == 200) {
